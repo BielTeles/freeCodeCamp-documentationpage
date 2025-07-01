@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentação Python - Guia Completo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Documentação Python</header>
+    <a href="#Introdução_ao_Python" class="nav-link">Introdução ao Python</a>
+    <a href="#Variáveis_e_Tipos_de_Dados" class="nav-link">Variáveis e Tipos de Dados</a>
+    <a href="#Estruturas_de_Controle" class="nav-link">Estruturas de Controle</a>
+    <a href="#Funções_em_Python" class="nav-link">Funções em Python</a>
+    <a href="#Estruturas_de_Dados" class="nav-link">Estruturas de Dados</a>
+    <a href="#Orientação_a_Objetos" class="nav-link">Orientação a Objetos</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introdução_ao_Python">
+      <header>Introdução ao Python</header>
+      <p>
+        Python é uma linguagem de programação de alto nível, interpretada e de propósito geral. 
+        Foi criada por Guido van Rossum e lançada pela primeira vez em 1991.
+      </p>
+      <p>
+        Python é conhecida por sua sintaxe simples e legível, o que a torna uma excelente escolha 
+        para iniciantes em programação. A filosofia do Python enfatiza a legibilidade do código 
+        e uma sintaxe que permite aos programadores expressar conceitos em poucas linhas de código.
+      </p>
+      <p>
+        Para começar com Python, você precisa instalá-lo em seu sistema. Você pode baixar Python 
+        gratuitamente do site oficial python.org.
+      </p>
+      <code>
+        # Seu primeiro programa em Python
+        print("Olá, mundo!")
+      </code>
+      <p>
+        Python é amplamente utilizado em várias áreas, incluindo:
+      </p>
+      <ul>
+        <li>Desenvolvimento web</li>
+        <li>Ciência de dados</li>
+        <li>Inteligência artificial</li>
+        <li>Automação e scripts</li>
+        <li>Desenvolvimento de jogos</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Variáveis_e_Tipos_de_Dados">
+      <header>Variáveis e Tipos de Dados</header>
+      <p>
+        Em Python, você não precisa declarar variáveis explicitamente. Você simplesmente atribui 
+        um valor a um nome de variável e Python automaticamente determina o tipo.
+      </p>
+      <p>
+        Python possui vários tipos de dados básicos que são fundamentais para a programação:
+      </p>
+      <code>
+        # Números inteiros
+        idade = 25
+        
+        # Números decimais
+        altura = 1.75
+        
+        # Strings (texto)
+        nome = "João"
+        
+        # Booleanos
+        estudante = True
+      </code>
+      <p>
+        Os tipos de dados principais em Python incluem:
+      </p>
+      <ul>
+        <li>int (números inteiros)</li>
+        <li>float (números decimais)</li>
+        <li>str (strings/texto)</li>
+        <li>bool (booleanos - True/False)</li>
+        <li>NoneType (valor None)</li>
+      </ul>
+      <p>
+        Você pode verificar o tipo de uma variável usando a função <code>type()</code>:
+      </p>
+      <code>
+        print(type(idade))    # <class 'int'>
+        print(type(altura))   # <class 'float'>
+        print(type(nome))     # <class 'str'>
+      </code>
+    </section>
+
+    <section class="main-section" id="Estruturas_de_Controle">
+      <header>Estruturas de Controle</header>
+      <p>
+        As estruturas de controle permitem que você controle o fluxo de execução do seu programa. 
+        Em Python, as principais estruturas de controle são condicionais e loops.
+      </p>
+      <p>
+        A estrutura condicional <code>if</code> permite executar código baseado em condições:
+      </p>
+      <code>
+        idade = 18
+        if idade >= 18:
+            print("Você é maior de idade")
+        elif idade >= 13:
+            print("Você é adolescente")
+        else:
+            print("Você é criança")
+      </code>
+      <p>
+        Os loops permitem repetir código. Python oferece dois tipos principais de loops:
+      </p>
+      <code>
+        # Loop for - para iterar sobre sequências
+        for i in range(5):
+            print(f"Contagem: {i}")
+        
+        # Loop while - enquanto uma condição for verdadeira
+        contador = 0
+        while contador < 3:
+            print(f"Contador: {contador}")
+            contador += 1
+      </code>
+      <p>
+        Python também oferece estruturas de controle avançadas como <code>break</code> e <code>continue</code> 
+        para controlar o comportamento dos loops.
+      </p>
+    </section>
+
+    <section class="main-section" id="Funções_em_Python">
+      <header>Funções em Python</header>
+      <p>
+        Funções são blocos de código reutilizáveis que executam uma tarefa específica. 
+        Elas ajudam a organizar o código e evitar repetição.
+      </p>
+      <p>
+        Para definir uma função em Python, você usa a palavra-chave <code>def</code>:
+      </p>
+      <code>
+        def saudacao(nome):
+            return f"Olá, {nome}!"
+        
+        # Chamando a função
+        mensagem = saudacao("Maria")
+        print(mensagem)  # Olá, Maria!
+      </code>
+      <p>
+        As funções podem ter parâmetros padrão, o que as torna mais flexíveis:
+      </p>
+      <code>
+        def calcular_area_retangulo(largura, altura=1):
+            return largura * altura
+        
+        # Pode ser chamada com 1 ou 2 argumentos
+        area1 = calcular_area_retangulo(5)      # 5 * 1 = 5
+        area2 = calcular_area_retangulo(5, 3)   # 5 * 3 = 15
+      </code>
+      <p>
+        Python também suporta funções lambda (funções anônimas) para operações simples:
+      </p>
+      <ul>
+        <li>Funções lambda são úteis para operações simples</li>
+        <li>São frequentemente usadas com funções como map(), filter() e sort()</li>
+        <li>Sintaxe: lambda argumentos: expressão</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Estruturas_de_Dados">
+      <header>Estruturas de Dados</header>
+      <p>
+        Python oferece várias estruturas de dados built-in que são fundamentais para 
+        organizar e manipular informações de forma eficiente.
+      </p>
+      <p>
+        As principais estruturas de dados em Python são:
+      </p>
+      <ul>
+        <li>Listas - coleções ordenadas e mutáveis</li>
+        <li>Tuplas - coleções ordenadas e imutáveis</li>
+        <li>Dicionários - coleções de pares chave-valor</li>
+        <li>Conjuntos (Sets) - coleções não ordenadas de elementos únicos</li>
+      </ul>
+      <p>
+        Aqui estão exemplos de como trabalhar com essas estruturas:
+      </p>
+      <code>
+        # Listas
+        frutas = ["maçã", "banana", "laranja"]
+        frutas.append("uva")  # Adiciona elemento
+        
+        # Dicionários
+        pessoa = {
+            "nome": "João",
+            "idade": 30,
+            "cidade": "São Paulo"
+        }
+        
+        # Tuplas
+        coordenadas = (10, 20)
+        
+        # Sets
+        numeros_unicos = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}
+      </code>
+      <p>
+        Cada estrutura de dados tem seus próprios métodos e propriedades que facilitam 
+        a manipulação dos dados armazenados.
+      </p>
+    </section>
+
+    <section class="main-section" id="Orientação_a_Objetos">
+      <header>Orientação a Objetos</header>
+      <p>
+        Python suporta programação orientada a objetos, permitindo criar classes e objetos 
+        para modelar entidades do mundo real em seu código.
+      </p>
+      <p>
+        Uma classe é um modelo para criar objetos. Aqui está um exemplo básico:
+      </p>
+      <code>
+        class Pessoa:
+            def __init__(self, nome, idade):
+                self.nome = nome
+                self.idade = idade
+            
+            def apresentar(self):
+                return f"Olá, eu sou {self.nome} e tenho {self.idade} anos"
+        
+        # Criando um objeto
+        pessoa1 = Pessoa("Ana", 25)
+        print(pessoa1.apresentar())
+      </code>
+      <p>
+        A programação orientada a objetos em Python inclui conceitos importantes como:
+      </p>
+      <ul>
+        <li>Encapsulamento</li>
+        <li>Herança</li>
+        <li>Polimorfismo</li>
+        <li>Abstração</li>
+      </ul>
+      <p>
+        A herança permite criar classes baseadas em outras classes, promovendo reutilização de código:
+      </p>
+      <code>
+        class Estudante(Pessoa):
+            def __init__(self, nome, idade, curso):
+                super().__init__(nome, idade)
+                self.curso = curso
+            
+            def estudar(self):
+                return f"{self.nome} está estudando {self.curso}"
+      </code>
+      <p>
+        Este paradigma de programação ajuda a organizar código complexo de forma mais estruturada e maintível.
+      </p>
+    </section>
+  </main>
+</body>
+</html> 

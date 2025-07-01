@@ -1,0 +1,303 @@
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Navbar - fixa na lateral esquerda em telas grandes */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: #2c3e50;
+  padding: 20px 0;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar header {
+  color: #ecf0f1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  border-bottom: 2px solid #34495e;
+  padding-bottom: 20px;
+}
+
+.nav-link {
+  display: block;
+  color: #bdc3c7;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  background-color: #34495e;
+  color: #3498db;
+  border-left-color: #3498db;
+  padding-left: 30px;
+}
+
+.nav-link:active,
+.nav-link.active {
+  background-color: #34495e;
+  color: #3498db;
+  border-left-color: #3498db;
+}
+
+/* Conteúdo principal */
+#main-doc {
+  margin-left: 300px;
+  padding: 40px;
+  max-width: 1000px;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Seções principais */
+.main-section {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.main-section:last-child {
+  border-bottom: none;
+}
+
+.main-section header {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #3498db;
+  font-weight: 600;
+}
+
+/* Parágrafos */
+.main-section p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #495057;
+}
+
+/* Listas */
+.main-section ul {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.main-section li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #495057;
+}
+
+/* Blocos de código */
+code {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 20px;
+  font-family: 'Courier New', Monaco, monospace;
+  font-size: 0.9rem;
+  display: block;
+  margin: 20px 0;
+  overflow-x: auto;
+  white-space: pre;
+  color: #2c3e50;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Código inline */
+p code {
+  display: inline;
+  padding: 2px 6px;
+  margin: 0;
+  background: #e9ecef;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Responsividade - Media Queries */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  #navbar {
+    width: 250px;
+  }
+  
+  #main-doc {
+    margin-left: 250px;
+    padding: 30px;
+  }
+  
+  .main-section header {
+    font-size: 2rem;
+  }
+  
+  code {
+    font-size: 0.85rem;
+    padding: 15px;
+  }
+}
+
+/* Mobile - Navbar no topo */
+@media screen and (max-width: 768px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    padding: 15px 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    border-bottom: 2px solid #34495e;
+  }
+  
+  #navbar.show {
+    transform: translateY(0);
+  }
+  
+  #navbar header {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .nav-link {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-left: none;
+    border-bottom: 1px solid #34495e;
+  }
+  
+  .nav-link:hover {
+    padding-left: 20px;
+    background-color: #34495e;
+  }
+  
+  #main-doc {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 20px;
+  }
+  
+  .main-section {
+    margin-bottom: 40px;
+  }
+  
+  .main-section header {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .main-section p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  code {
+    font-size: 0.8rem;
+    padding: 12px;
+    overflow-x: scroll;
+  }
+}
+
+/* Mobile pequeno */
+@media screen and (max-width: 480px) {
+  #main-doc {
+    padding: 15px;
+  }
+  
+  .main-section header {
+    font-size: 1.6rem;
+  }
+  
+  .main-section p {
+    font-size: 0.95rem;
+  }
+  
+  code {
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+  
+  #navbar header {
+    font-size: 1.3rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+/* Botão para mostrar/esconder navbar no mobile */
+@media screen and (max-width: 768px) {
+  body::before {
+    content: "☰ Menu";
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 14px;
+    user-select: none;
+  }
+  
+  /* Adiciona espaço no topo para o botão de menu */
+  #main-doc {
+    padding-top: 60px;
+  }
+}
+
+/* Melhorias visuais adicionais */
+.main-section ul li::marker {
+  color: #3498db;
+}
+
+.main-section ul li:hover {
+  color: #2c3e50;
+  transition: color 0.2s ease;
+}
+
+/* Destaque para elementos importantes */
+.main-section p strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Efeito de scroll suave para links internos */
+html {
+  scroll-padding-top: 20px;
+} 
